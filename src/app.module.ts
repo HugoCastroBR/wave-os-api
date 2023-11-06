@@ -6,6 +6,8 @@ import { HealthModule } from './health/health.module';
 import { AuthModule } from './auth/auth.module';
 import { MusicModule } from './music/music.module';
 import { MulterModule } from '@nestjs/platform-express';
+import { TodoModule } from './todo/todo.module';
+import { NoteModule } from './note/note.module';
 
 @Module({
   imports: [
@@ -16,6 +18,8 @@ import { MulterModule } from '@nestjs/platform-express';
     MulterModule.register({
       dest: './upload/files',
     }),
+    TodoModule,
+    NoteModule,
   ],
   controllers: [AppController],
   providers: [AppService],
