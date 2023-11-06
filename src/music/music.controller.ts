@@ -128,10 +128,10 @@ export class MusicController {
     return this.musicService.findOne(+id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateMusicDto: UpdateMusicDto) {
-    return this.musicService.update(+id, updateMusicDto);
-  }
+  // @Patch(':id')
+  // update(@Param('id') id: string, @Body() updateMusicDto: UpdateMusicDto) {
+  //   return this.musicService.update(+id, updateMusicDto);
+  // }
 
   @Delete(':id')
   remove(@Param('id') id: string) {

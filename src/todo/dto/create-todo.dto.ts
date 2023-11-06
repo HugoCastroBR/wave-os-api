@@ -6,4 +6,10 @@ export class CreateTodoDto {
 
   @ApiProperty()
   content: string;
+
+  @ApiProperty({
+    default: false,
+    required: false,
+  })
+  isDone?: boolean;
 }

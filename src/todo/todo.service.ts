@@ -11,6 +11,7 @@ export class TodoService {
       data: {
         title: createTodoDto.title,
         content: createTodoDto.content,
+        isDone: false,
       },
     });
   }
@@ -35,6 +36,7 @@ export class TodoService {
       data: {
         title: updateTodoDto.title,
         content: updateTodoDto.content,
+        isDone: updateTodoDto.isDone,
       },
     });
   }
@@ -45,5 +47,9 @@ export class TodoService {
         id: id,
       },
     });
+  }
+
+  async removeAll() {
+    return await this.prisma.todo.deleteMany({});
   }
 }

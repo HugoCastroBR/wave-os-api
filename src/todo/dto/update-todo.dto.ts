@@ -13,4 +13,10 @@ export class UpdateTodoDto extends PartialType(CreateTodoDto) {
     required: false,
   })
   title?: string;
+
+  @ApiProperty({
+    default: false,
+    required: false,
+  })
+  isDone?: boolean;
 }

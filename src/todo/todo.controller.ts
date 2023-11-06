@@ -41,4 +41,9 @@ export class TodoController {
   async remove(@Param('id') id: string) {
     return await this.todoService.remove(+id);
   }
+
+  @Delete()
+  async removeAll() {
+    return await this.todoService.removeAll();
+  }
 }

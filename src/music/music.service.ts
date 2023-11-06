@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { CreateMusicDto } from './dto/create-music.dto';
-import { UpdateMusicDto } from './dto/update-music.dto';
 import { PrismaService } from 'src/database/prisma.service';
 
 @Injectable()
@@ -25,9 +24,9 @@ export class MusicService {
     return `This action returns a #${id} music`;
   }
 
-  update(id: number, updateMusicDto: UpdateMusicDto) {
-    return `This action updates a #${id} music`;
-  }
+  // update(id: number, updateMusicDto: UpdateMusicDto) {
+  //   return `This action updates a #${id} music`;
+  // }
 
   async remove(id: number) {
     return await this.prisma.musicFile.delete({
